@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+.blind {
+    display: none;
+}
+
+body #root,
+#root > div {
+    height: 1000%;
+}
+
+#header {
+    height: 64px;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+}
+
+#header-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 0 auto; */
+    width: 1024px;
+    /* background-color: orange; */
+}
+
+#header-area img {
+    width: 128px;
+    height: 36px;
+}
+
+#footer {
+    height: 64px;
+    background-color: rgb(230, 230, 230);
+}
