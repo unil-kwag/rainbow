@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from menu_django import models
+from menu import models
 
 class UserSerializer(ModelSerializer):
     class Meta:

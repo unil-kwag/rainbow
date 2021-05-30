@@ -3,8 +3,8 @@ from django.shortcuts import render
 from rest_framework.serializers import Serializer
 from rest_framework.viewsets import ModelViewSet
 
-from menu_django import models
-from menu_django import serializers
+from menu import models
+from menu import serializers
 # Create your views here.
 
 class UserViewSet(ModelViewSet):
@@ -14,3 +14,4 @@ class UserViewSet(ModelViewSet):
 class MenuViewSet(ModelViewSet):
     queryset = models.Menus.objects.all()
     serializer_class = serializers.MenuSerializer
+# Create your views here.
