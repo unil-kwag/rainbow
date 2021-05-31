@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: baemin;
+  src: url(../src/fonts/BMJUA_ttf.ttf);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: baemin;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: auto;
+  border-bottom: rgb(253, 135, 145) dotted 3px;
+  /* background-color: aliceblue; */
+}
+#header-area {
+  /* margin: 0 auto; */
+  /* float: left; */
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1024px;
+  /* background-color: orange; */
 }
 
-.App-link {
-  color: #61dafb;
+#rainbow-logo > img {
+  float: left;
+  width: 60px;
+  height: 60px;
+}
+#rainbow-logo > p {
+  float: left;
+  font-size: 50px;
+  color: rgb(253, 135, 145);
+  padding-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#footer {
+  clear: both;
+  border-top: rgb(253, 135, 145) dotted 3px;
+  height: 64px;
+  background-color: rgb(230, 230, 230);
 }
