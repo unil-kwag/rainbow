@@ -4,6 +4,13 @@ import UploadPage from "./upload";
 import MainPage from "./main";
 import { Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
+import {
+  Switch,
+  useHistory,
+  BrowserRouter as Router,
+  Route,
+  Link,
+} from "react-router-dom";
 
 function App() {
   return (
@@ -28,8 +35,10 @@ function App() {
       </header>
 
       <main>
-        <MainPage></MainPage>
-        {/* <UploadPage></UploadPage> */}
+        <Router>
+          <Route exact path="/" component={MainPage} />
+          <Route exact path="/upload" component={UploadPage} />
+        </Router>
       </main>
 
       <footer>
