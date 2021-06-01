@@ -50,16 +50,31 @@ function App() {
               안녕하세요!
             </button>
           </div>
-          <div>
-            <p>
-              <Link to={{ pathname: "/upload/", state: { test: "hello" } }}>
-                Upload
-              </Link>
-            </p>
-          </div>
         </section>
       </header>
 
+      <banner>
+        <section>
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <Link to={{ pathname: "/upload/" }}>
+                    <p>식단</p>
+                  </Link>
+                </li>
+                <li>
+                  <a href="1.html">식단기록</a>
+                </li>
+                <li>
+                  <a href="1.html">룰렛</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+      </banner>
+      
       <main>
         <Switch>
           <Route exact path="/" component={MainPage} />
