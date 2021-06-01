@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 import "./index.css";
 class MainPage extends Component {
   render() {
@@ -7,7 +8,7 @@ class MainPage extends Component {
       <nav>
         <ul>
           <li>
-            <Link to="/upload">
+            <Link to={{ pathname: "/upload/", state: { test: "hello" } }}>
               <p>식단</p>
             </Link>
           </li>

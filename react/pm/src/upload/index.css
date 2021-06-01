@@ -1,4 +1,8 @@
 #divv {
-  width: 100px;
+  width: 30%;
   border: dotted 3px black;
+}
+#create {
+  text-align: center;
+  border-bottom: solid 2px black;
 }

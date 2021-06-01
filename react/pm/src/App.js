@@ -1,3 +1,5 @@
+/*eslint-disable*/
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import UploadPage from "./upload";
@@ -11,8 +13,24 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import axios from "axios";
 
 function App() {
+  const [name, setname] = React.useState([]);
+
+  React.useEffect(function () {
+    axios
+      .get("http://127.0.0.1:8000/menu/")
+      .then(function (result) {
+        const name = result.data;
+        console.log(name[0]);
+        setname(name);
+      })
+      .catch(function (error) {
+        console.log("fail");
+      });
+  }, []);
+
   return (
     <div>
       <header>
