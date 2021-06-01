@@ -4,6 +4,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import UploadPage from "./upload";
 import MainPage from "./main";
+import HistoryPage from "./hisotry";
 import { Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import {
@@ -78,6 +79,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route exact path="/upload" component={UploadPage} />
+          <Route exact path="/history" component={HistoryPage} />
         </Switch>
       </main>
 

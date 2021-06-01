@@ -5,13 +5,18 @@ import "./index.css";
 
 function UploadPage({ location }) {
   // console.log(location.state.test);
+
+  const onKeyUp = (event) => {
+    console.log(event);
+  };
+
   const [menu, setmenu] = React.useState([]);
   React.useEffect(function () {
     axios
       .get("http://127.0.0.1:8000/menu/")
       .then(function (result) {
         const menu = result.data;
-        console.log(menu[0]);
+        console.log("success");
         setmenu(menu);
       })
       .catch(function (error) {
@@ -36,8 +41,9 @@ function UploadPage({ location }) {
       <form>
         <input type="date"></input>
         <input type="submit" value="Submit"></input>
+        <button style={{ width: "100px", height: "100px" }}>button</button>
       </form>
-      <button onClick></button>
+      <input onKeyDown={onKeyUp}></input>
     </div>
   );
 }
