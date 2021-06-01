@@ -50,6 +50,7 @@ function App() {
               안녕하세요!
             </button>
           </div>
+
           <div id="category">
             <p>
               <Link to={{ pathname: "/", state: { test: "hello" } }}>홈</Link>

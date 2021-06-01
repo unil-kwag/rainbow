@@ -4,7 +4,7 @@ import axios from "axios";
 import "./index.css";
 
 function UploadPage({ location }) {
-  console.log(location.state.test);
+  // console.log(location.state.test);
   const [menu, setmenu] = React.useState([]);
   React.useEffect(function () {
     axios
