@@ -5,12 +5,21 @@ import "./index.css";
 
 function UploadPage({ location }) {
   // console.log(location.state.test);
+  const [menu, setmenu] = React.useState([]);
 
-  const onKeyUp = (event) => {
-    console.log(event);
+  const ondelete = (id) => {
+    console.log(id);
+    axios
+      .delete("http://127.0.0.1:8000/menu/" + id + "/")
+      .then(function (result) {
+        console.log(result);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    window.location.reload();
   };
 
-  const [menu, setmenu] = React.useState([]);
   React.useEffect(function () {
     axios
       .get("http://127.0.0.1:8000/menu/")
@@ -29,23 +38,24 @@ function UploadPage({ location }) {
 
   return (
     <div className="menu_table">
-      <div id="calender">
-        <form>
-          <input type="date"></input>
-          <input type="submit" value="Submit"></input>
-        </form>
-      </div>
-      <div id="contents">
-        {menu.map(function (menus, index) {
-          return (
-            <div id="divv">
-              <p id="create">{menu[0].create_at}</p>
-              <p>음식 이름 : {menus.name} </p>
-              <p>음식 가격 : {menus.price}원</p>
-            </div>
-          );
-        })}
-      </div>
+      {menu.map(function (menus, index) {
+        return (
+          <div id="divv">
+            <div></div>
+            <p id="create">{menu.create_at}</p>
+            <p>
+              {menus.id}음식 이름 : {menus.name}
+            </p>
+            <p>음식 가격 : {menus.price}원</p>
+            <button
+              onClick={(e) => ondelete(menus.id)}
+              style={{ width: "100%" }}
+            >
+              삭제
+            </button>
+          </div>
+        );
+      })}
     </div>
   );
 }
