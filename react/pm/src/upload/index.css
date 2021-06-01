@@ -5,18 +5,36 @@
 }
 #divv {
   width: 100%;
-  border: dotted 3px black;
+  border: solid 1px grey;
+  font-size: 20px;
+  padding-bottom: 1cm;
 }
 #create {
   text-align: center;
   border-bottom: solid 2px black;
 }
 
+.menu_table {
+  height: 100%;
+}
+
 #contents {
   padding-top: 5px;
   padding-bottom: 5px;
-  display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   width: 1024px;
+}
+
+#delete {
+  font-size: 20px;
+}
+#delete:hover {
+  background-color: orange;
+}
+
+#delete:active,
+#delete.active {
+  background-color: orange;
 }

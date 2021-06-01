@@ -38,24 +38,36 @@ function UploadPage({ location }) {
 
   return (
     <div className="menu_table">
-      {menu.map(function (menus, index) {
-        return (
-          <div id="divv">
-            <div></div>
-            <p id="create">{menu.create_at}</p>
-            <p>
-              {menus.id}음식 이름 : {menus.name}
-            </p>
-            <p>음식 가격 : {menus.price}원</p>
-            <button
-              onClick={(e) => ondelete(menus.id)}
-              style={{ width: "100%" }}
-            >
-              삭제
-            </button>
-          </div>
-        );
-      })}
+      <div id="calender">
+        <form>
+          <input type="date"></input>
+          <input type="submit" value="Submit"></input>
+        </form>
+      </div>
+      <div id="contents">
+        <list>
+          {menu.map(function (menus, index) {
+            return (
+              <div id="divv">
+                <p id="create">{menus.create_at}</p>
+                <p>
+                  {menus.id}
+                  <br />
+                  음식 이름 : {menus.name}
+                </p>
+                <p>음식 가격 : {menus.price}원</p>
+                <button
+                  id="delete"
+                  onClick={(e) => ondelete(menus.id)}
+                  style={{ width: "100%" }}
+                >
+                  삭제
+                </button>
+              </div>
+            );
+          })}
+        </list>
+      </div>
     </div>
   );
 }
