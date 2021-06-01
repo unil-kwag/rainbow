@@ -1,5 +1,10 @@
+#menu_table {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 #divv {
-  width: 30%;
+  width: 100%;
   border: dotted 3px black;
 }
 #create {
