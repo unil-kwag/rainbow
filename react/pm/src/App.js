@@ -50,10 +50,23 @@ function App() {
               안녕하세요!
             </button>
           </div>
-          <div>
+          <div id="category">
+            <p>
+              <Link to={{ pathname: "/", state: { test: "hello" } }}>홈</Link>
+            </p>
             <p>
               <Link to={{ pathname: "/upload/", state: { test: "hello" } }}>
-                Upload
+                식단
+              </Link>
+            </p>
+            <p>
+              <Link to={{ pathname: "/history/", state: { test: "hello" } }}>
+                식단기록
+              </Link>
+            </p>
+            <p>
+              <Link to={{ pathname: "/rullet/", state: { test: "hello" } }}>
+                룰렛
               </Link>
             </p>
           </div>
