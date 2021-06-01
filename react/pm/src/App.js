@@ -5,6 +5,7 @@ import "./App.css";
 import UploadPage from "./upload";
 import MainPage from "./main";
 import HistoryPage from "./hisotry";
+import UpdatePage from "./update";
 import { Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import {
@@ -56,20 +57,31 @@ function App() {
 
           <div id="category">
             <p>
-              <Link to={{ pathname: "/", state: { test: "hello" } }}>홈</Link>
+              <Link id="a" to={{ pathname: "/", state: { test: "hello" } }}>
+                홈
+              </Link>
             </p>
             <p>
-              <Link to={{ pathname: "/upload/", state: { test: "hello" } }}>
+              <Link
+                id="a"
+                to={{ pathname: "/upload/", state: { test: "hello" } }}
+              >
                 식단
               </Link>
             </p>
             <p>
-              <Link to={{ pathname: "/history/", state: { test: "hello" } }}>
+              <Link
+                id="a"
+                to={{ pathname: "/history/", state: { test: "hello" } }}
+              >
                 식단기록
               </Link>
             </p>
             <p>
-              <Link to={{ pathname: "/rullet/", state: { test: "hello" } }}>
+              <Link
+                id="a"
+                to={{ pathname: "/rullet/", state: { test: "hello" } }}
+              >
                 룰렛
               </Link>
             </p>
@@ -82,6 +94,7 @@ function App() {
           <Route exact path="/" component={MainPage} />
           <Route exact path="/upload" component={UploadPage} />
           <Route exact path="/history" component={HistoryPage} />
+          <Route exact path="/update" component={UpdatePage} />
         </Switch>
       </main>
 

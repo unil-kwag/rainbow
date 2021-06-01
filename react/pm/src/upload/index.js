@@ -1,7 +1,9 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import "./index.css";
+import MenuContext from "antd/lib/menu/MenuContext";
 
 function UploadPage({ location }) {
   // console.log(location.state.test);
@@ -27,6 +29,7 @@ function UploadPage({ location }) {
         const menu = result.data;
         console.log("success");
         setmenu(menu);
+        console.log(menu);
       })
       .catch(function (error) {
         console.log("fail");
@@ -45,28 +48,33 @@ function UploadPage({ location }) {
         </form>
       </div>
       <div id="contents">
-        <list>
-          {menu.map(function (menus, index) {
-            return (
-              <div id="divv">
-                <p id="create">{menus.create_at}</p>
-                <p>
-                  {menus.id}
-                  <br />
-                  음식 이름 : {menus.name}
-                </p>
-                <p>음식 가격 : {menus.price}원</p>
-                <button
-                  id="delete"
-                  onClick={(e) => ondelete(menus.id)}
-                  style={{ width: "100%" }}
-                >
-                  삭제
+        {menu.map(function (menus, index) {
+          return (
+            <div id="divv">
+              <p id="create">{menus.create_at}</p>
+              <p>음식 이름 : {menus.name}</p>
+              <p>음식 가격 : {menus.price}원</p>
+              <p>{menus.menu_id} 인분</p>
+              <button
+                id="delete"
+                onClick={(e) => ondelete(menus.id)}
+                style={{ width: "100%" }}
+              >
+                삭제
+              </button>
+              <Link 
+                to={{
+                  pathname: "/update",
+                  state: { id: menus.id, mid: menus.menu_id },
+                }}
+              >
+                <button id="delete" style={{ width: "100%" }}>
+                  수정
                 </button>
-              </div>
-            );
-          })}
-        </list>
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
