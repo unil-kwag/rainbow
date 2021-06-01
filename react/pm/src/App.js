@@ -14,6 +14,7 @@ import {
   Link,
 } from "react-router-dom";
 import axios from "axios";
+import reactDom from "react-dom";
 
 function App() {
   const [name, setname] = React.useState([]);
@@ -49,14 +50,21 @@ function App() {
               안녕하세요!
             </button>
           </div>
+          <div>
+            <p>
+              <Link to={{ pathname: "/upload/", state: { test: "hello" } }}>
+                Upload
+              </Link>
+            </p>
+          </div>
         </section>
       </header>
 
       <main>
-        <Router>
+        <Switch>
           <Route exact path="/" component={MainPage} />
           <Route exact path="/upload" component={UploadPage} />
-        </Router>
+        </Switch>
       </main>
 
       <footer>
