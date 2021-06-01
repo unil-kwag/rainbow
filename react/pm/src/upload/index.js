@@ -40,11 +40,14 @@ function UploadPage({ location }) {
   }
 
   return (
-    <div className="menu_table">
+    <div
+      className="menu_table"
+      style={{ maxHeight: "1024px", overflow: "auto" }}
+    >
       <div id="calender">
         <form>
-          <input type="date"></input>
-          <input type="submit" value="Submit"></input>
+          <input id="date" type="date"></input>
+          <input id="submit" type="submit" value="Submit"></input>
         </form>
       </div>
       <div id="contents">
@@ -62,7 +65,7 @@ function UploadPage({ location }) {
               >
                 삭제
               </button>
-              <Link 
+              <Link
                 to={{
                   pathname: "/update",
                   state: { id: menus.id, mid: menus.menu_id },

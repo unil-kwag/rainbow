@@ -58,17 +58,21 @@ main {
   justify-content: center;
   flex-direction: row;
   align-items: flex-start;
-  height: 1024px;
+  height: 50%;
 }
 
 footer {
-  height: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
+
 #footer {
   clear: both;
   border-top: gery solid 1px;
   height: 30px;
   background-color: rgb(230, 230, 230);
+  width: 100%;
 }
 
 nav {

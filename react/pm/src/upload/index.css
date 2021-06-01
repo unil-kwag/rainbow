@@ -16,6 +16,15 @@
 
 .menu_table {
   height: 100%;
+  width: 1024px;
+}
+
+#date {
+  font-size: 20px;
+}
+
+#submit {
+  font-size: 20px;
 }
 
 #contents {
@@ -24,7 +33,7 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  width: 1024px;
+  width: 1000px;
 }
 
 #delete {

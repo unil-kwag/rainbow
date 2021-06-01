@@ -101,7 +101,7 @@ function App() {
       <footer>
         <section>
           <div id="footer">
-            <div>만든 이: 편도준, 김도영, 심명진, 곽운일 Copyright Team 2</div>
+            만든 이: 편도준, 김도영, 심명진, 곽운일 Copyright Team 2
           </div>
         </section>
       </footer>
