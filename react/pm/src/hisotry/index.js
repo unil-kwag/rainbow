@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import "./index.css";
+
 function HistoryPage() {
   const [menuname, setmenuname] = React.useState("");
   const [menuprice, setmenuprice] = React.useState();
@@ -29,26 +31,31 @@ function HistoryPage() {
   };
   return (
     <div>
-      <form onSubmit={submithandle}>
+      <form id="history" onSubmit={submithandle}>
         <input
+          id="name"
           type="text"
           placeholder="이름"
           value={menuname}
           onChange={(e) => setmenuname(e.target.value)}
         ></input>
         <input
+          id="price"
           type="number"
           placeholder="가격"
           value={menuprice}
           onChange={(e) => setmenuprice(e.target.value)}
         ></input>
         <input
+          id="count"
           type="text"
           placeholder="개수"
           value={menuea}
           onChange={(e) => setmenuea(e.target.value)}
         ></input>
-        <button type="submit">등록</button>
+        <button id="button" type="submit">
+          등록
+        </button>
       </form>
     </div>
   );

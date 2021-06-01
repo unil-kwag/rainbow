@@ -11,3 +11,12 @@
   text-align: center;
   border-bottom: solid 2px black;
 }
+
+#contents {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1024px;
+}

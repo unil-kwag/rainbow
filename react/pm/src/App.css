@@ -13,7 +13,7 @@ header {
   align-items: center;
   justify-content: center;
   height: auto;
-  border-bottom: rgb(253, 135, 145) dotted 3px;
+  border-bottom: grey solid 1px;
   /* background-color: aliceblue; */
 }
 #header-area {
@@ -29,6 +29,9 @@ header {
   /* background-color: orange; */
 }
 
+#header-name {
+  font-size: 50px;
+}
 #category {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -53,12 +56,18 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  height: 1024px;
 }
 
+footer {
+  height: 10px;
+}
 #footer {
   clear: both;
-  border-top: rgb(253, 135, 145) dotted 3px;
-  height: 64px;
+  border-top: gery solid 1px;
+  height: 30px;
   background-color: rgb(230, 230, 230);
 }
 

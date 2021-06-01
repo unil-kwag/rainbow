@@ -45,7 +45,9 @@ function App() {
               />
               <p>Rainbow!</p>
             </div>
-            <p>식단을 부탁해</p>
+            <div id="header-name">
+              <p>식단을 부탁해</p>
+            </div>
             <button>
               <Avatar shape="square" size={40} icon={<UserOutlined />} />1 님
               안녕하세요!
