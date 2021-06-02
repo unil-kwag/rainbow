@@ -83,6 +83,7 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/" component={MainPage} />
+          <Route exact path="/join" component={JoinPage} />
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/upload" component={UploadPage} />
           <Route exact path="/history" component={HistoryPage} />
