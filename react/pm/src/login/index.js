@@ -36,7 +36,13 @@ function LoginPage({ location }) {
               value="로그인"
             />
           </Link>
-          <input type="button" value="회원가입" />
+          <Link to={{ pathname: "/join" }}>
+            <input
+              onClick={() => location.test(userid)}
+              type="button"
+              value="회원가입"
+            />
+          </Link>
         </div>
       </form>
     </div>
