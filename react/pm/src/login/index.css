@@ -4,13 +4,47 @@
   /* display: flex; */
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .userbox {
   font-size: 30px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#idname {
+  font-size: 30px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pw {
+  font-size: 30px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #box {
   font-size: 50px;
+  font-size: 30px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loginbox {
+  font-size: 50px;
+  margin: 50px;
+}
+#pwbox {
+  font-size: 50px;
+  margin: 50px;
 }
 
 input {
