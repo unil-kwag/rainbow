@@ -23,19 +23,11 @@ import reactDom from "react-dom";
 
 function App() {
   const [name, setname] = React.useState([]);
+  const [userid, setuserid] = React.useState("1");
 
-  React.useEffect(function () {
-    axios
-      .get("http://127.0.0.1:8000/menu/")
-      .then(function (result) {
-        const name = result.data;
-        console.log(name[0]);
-        setname(name);
-      })
-      .catch(function (error) {
-        console.log("fail");
-      });
-  }, []);
+  const test = (id) => {
+    setuserid(id);
+  };
 
   return (
     <div>
@@ -53,39 +45,35 @@ function App() {
               <p>식단을 부탁해</p>
             </div>
             <button>
-              <Avatar shape="square" size={40} icon={<UserOutlined />} />1 님
-              안녕하세요!
+              <Avatar shape="square" size={40} icon={<UserOutlined />} />
+              {userid} 님 안녕하세요!
             </button>
           </div>
 
           <div id="category">
             <p>
-              <Link id="a" to={{ pathname: "/home", state: { test: "hello" } }}>
+              <Link id="a" to={{ pathname: "/" }}>
                 홈
               </Link>
             </p>
             <p>
-              <Link
-                id="a"
-                to={{ pathname: "/upload/", state: { test: "hello" } }}
-              >
+              <Link id="a" to={{ pathname: "/upload", user_id: userid }}>
                 식단
               </Link>
             </p>
             <p>
-              <Link
-                id="a"
-                to={{ pathname: "/history/", state: { test: "hello" } }}
-              >
+              <Link id="a" to={{ pathname: "/history", user_id: userid }}>
                 식단기록
               </Link>
             </p>
             <p>
-              <Link
-                id="a"
-                to={{ pathname: "/rullet/", state: { test: "hello" } }}
-              >
+              <Link id="a" to={{ pathname: "/rullet", user_id: userid }}>
                 룰렛
+              </Link>
+            </p>
+            <p>
+              <Link id="a" to={{ pathname: "/login", test: test }}>
+                로그인
               </Link>
             </p>
           </div>
@@ -94,8 +82,8 @@ function App() {
 
       <main>
         <Switch>
-          <Route exact path="/" component={LoginPage} />
-          <Route exact path="/home" component={MainPage} />
+          <Route exact path="/" component={MainPage} />
+          <Route exact path="/login" component={LoginPage} />
           <Route exact path="/upload" component={UploadPage} />
           <Route exact path="/history" component={HistoryPage} />
           <Route exact path="/update" component={UpdatePage} />

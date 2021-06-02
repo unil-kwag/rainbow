@@ -6,10 +6,6 @@ function HistoryPage() {
   const [menuname, setmenuname] = React.useState("");
   const [menuprice, setmenuprice] = React.useState();
   const [menuea, setmenuea] = React.useState();
-  //   const changehandle = (e) => {
-  //     console.log("hello");
-  //   };
-  const clickhandle = () => {};
 
   const submithandle = (event) => {
     alert("등록 완료!");
@@ -26,8 +22,6 @@ function HistoryPage() {
       .catch(function (error) {
         console.log(error);
       });
-
-    console.log(menuname, menuprice, menuea);
   };
   return (
     <div>
@@ -53,9 +47,7 @@ function HistoryPage() {
           value={menuea}
           onChange={(e) => setmenuea(e.target.value)}
         ></input>
-        <button id="button" type="submit">
-          등록
-        </button>
+        <button id="button">등록</button>
       </form>
     </div>
   );
