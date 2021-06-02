@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-
+import { Form, Button } from "antd";
 import MainPage from "../main";
 import { Link } from "react-router-dom";
 
@@ -10,18 +10,24 @@ function LoginPage({ location }) {
   return (
     <div>
       <form id="login">
-        <p>
-          아이디
+        <div id="idname">로그인</div>
+        <div id="id">
           <input
-            className="userbox"
+            class="userbox"
             type="text"
+            name="userid"
+            placeholder="아이디를 입력하세요"
             onChange={(e) => setuserid(e.target.value)}
           />
-        </p>
-        <p>
-          패스워드
-          <input className="userbox" name="userpassword" />
-        </p>
+        </div>
+        <div id="password">
+          <input
+            class="pw"
+            type="password"
+            name="userpassword"
+            placeholder="비밀번호를 입력하세요"
+          />
+        </div>
         <div id="box">
           <Link to={{ pathname: "/", user_id: userid }}>
             <input
