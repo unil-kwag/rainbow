@@ -6,9 +6,10 @@ import "./index.css";
 import MenuContext from "antd/lib/menu/MenuContext";
 
 function UploadPage({ location }) {
-  console.log("location-------------- : " + location.user_id);
+  console.log("location.date:", location.date);
+  console.log("location.id:", location.user_id);
   const [menu, setmenu] = React.useState([]);
-
+  const [date, setdate] = React.useState("");
   const ondelete = (id) => {
     console.log(id);
     axios
@@ -45,13 +46,24 @@ function UploadPage({ location }) {
     >
       <div id="calender">
         <form>
-          <input id="date" type="date"></input>
-          <input id="submit" type="submit" value="Submit"></input>
+          <input
+            id="date"
+            type="date"
+            onChange={(e) => setdate(e.target.value)}
+          ></input>
+          <Link to={{ pathname: "/upload", user_id:location.user_id,date: date }}>
+            <input
+              id="submit"
+              type="submit"
+              value="Submit"
+              onClick={() => console.log(date)}
+            ></input>
+          </Link>
         </form>
       </div>
       <div id="contents">
         {menu.map(function (menus, index) {
-          if (menus.menu_id == location.user_id) {
+          if (menus.menu_id == location.user_id && menus.create_at == location.date) {
             return (
               <div id="divv">
                 <p id="create">{menus.create_at}</p>

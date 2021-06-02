@@ -1,7 +1,6 @@
 import React from "react";
 import "./index.css";
 
-import MainPage from "../main";
 import { Link } from "react-router-dom";
 
 function LoginPage({ location }) {
