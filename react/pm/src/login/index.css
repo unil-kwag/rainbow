@@ -1,0 +1,19 @@
+#login {
+  flex-direction: row;
+  font-size: 50px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+.userbox {
+  font-size: 30px;
+}
+#box {
+  font-size: 50px;
+}
+
+input {
+  font-size: 60px;
+  margin: 30px;
+}

@@ -6,6 +6,9 @@ import UploadPage from "./upload";
 import MainPage from "./main";
 import HistoryPage from "./hisotry";
 import UpdatePage from "./update";
+import LoginPage from "./login";
+import JoinPage from "./join";
+
 import { Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import {
@@ -57,7 +60,7 @@ function App() {
 
           <div id="category">
             <p>
-              <Link id="a" to={{ pathname: "/", state: { test: "hello" } }}>
+              <Link id="a" to={{ pathname: "/home", state: { test: "hello" } }}>
                 홈
               </Link>
             </p>
@@ -91,7 +94,8 @@ function App() {
 
       <main>
         <Switch>
-          <Route exact path="/" component={MainPage} />
+          <Route exact path="/" component={LoginPage} />
+          <Route exact path="/home" component={MainPage} />
           <Route exact path="/upload" component={UploadPage} />
           <Route exact path="/history" component={HistoryPage} />
           <Route exact path="/update" component={UpdatePage} />
