@@ -1,11 +1,11 @@
 import React from "react";
 import "./index.css";
+
 import MainPage from "../main";
 import { Link } from "react-router-dom";
 
 function LoginPage({ location }) {
   const [userid, setuserid] = React.useState("");
-
 
   return (
     <div>
