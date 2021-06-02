@@ -51,7 +51,9 @@ function UploadPage({ location }) {
             type="date"
             onChange={(e) => setdate(e.target.value)}
           ></input>
-          <Link to={{ pathname: "/upload", user_id:location.user_id,date: date }}>
+          <Link
+            to={{ pathname: "/upload", user_id: location.user_id, date: date }}
+          >
             <input
               id="submit"
               type="submit"
@@ -63,13 +65,16 @@ function UploadPage({ location }) {
       </div>
       <div id="contents">
         {menu.map(function (menus, index) {
-          if (menus.menu_id == location.user_id && menus.create_at == location.date) {
+          if (
+            menus.menu_id == location.user_id &&
+            menus.create_at == location.date
+          ) {
             return (
               <div id="divv">
                 <p id="create">{menus.create_at}</p>
                 <p>음식 이름 : {menus.name}</p>
                 <p>음식 가격 : {menus.price}원</p>
-                <p>{menus.menu_id} 인분</p>
+                <p>{menus.ea} 인분</p>
                 <button
                   id="delete"
                   onClick={(e) => ondelete(menus.id)}
