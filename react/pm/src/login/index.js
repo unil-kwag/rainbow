@@ -36,7 +36,7 @@ function LoginPage({ location }) {
               value="로그인"
             />
           </Link>
-          <Link to={{ pathname: "/join" }}>
+          <Link to={{ pathname: "/join", user_id: userid }}>
             <input
               onClick={() => location.test(userid)}
               type="button"

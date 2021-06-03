@@ -75,10 +75,9 @@ function UpdatePage({ location }) {
         value={menuea}
         onChange={(e) => setmenuea(e.target.value)}
       ></input>
-      <button
-        style={{ width: "100px", height: "50px" }}
-        onClick={onupdate}
-      >수정</button>
+      <button style={{ width: "100px", height: "50px" }} onClick={onupdate}>
+        수정
+      </button>
     </div>
   );
 }

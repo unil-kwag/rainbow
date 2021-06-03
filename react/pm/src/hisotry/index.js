@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import "./index.css";
 
-function HistoryPage() {
+function HistoryPage({ location }) {
   const [menuname, setmenuname] = React.useState("");
   const [menuprice, setmenuprice] = React.useState();
   const [menuea, setmenuea] = React.useState();
@@ -11,7 +11,7 @@ function HistoryPage() {
     alert("등록 완료!");
     axios
       .post("http://127.0.0.1:8000/menu/", {
-        menu_id: "1",
+        menu_id: location.user_id,
         name: menuname,
         price: menuprice,
         ea: menuea,

@@ -25,7 +25,6 @@ class Menus(models.Model): #식단테이블
     
     class Meta:
          db_table = 'menus'
-
          
 class Kcal(models.Model): #식단테이블
     kcal_id = models.ForeignKey(Menus ,on_delete=models.CASCADE, db_column="kcal_id")
@@ -35,4 +34,4 @@ class Kcal(models.Model): #식단테이블
     
     class Meta:
          db_table = 'kcal'
-    
+# Create your models here.

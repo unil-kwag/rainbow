@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+# Create your views here.
 from rest_framework.serializers import Serializer
 from rest_framework.viewsets import ModelViewSet
 
@@ -18,4 +19,3 @@ class MenuViewSet(ModelViewSet):
 class KcalViewSet(ModelViewSet):
     queryset = models.Kcal.objects.all()
     serializer_class = serializers.KcalSerializer
-# Create your views here.
